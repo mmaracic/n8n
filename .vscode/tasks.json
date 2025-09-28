@@ -1,0 +1,49 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "npm install",
+      "type": "shell",
+      "command": "bash",
+      "args": [
+        "-c",
+        "npm install"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "clear": true,
+        "echo": true
+      },
+      "detail": "Install project dependencies (always runs)."
+    },
+    {
+      "label": "start n8n",
+      "type": "shell",
+      "command": "bash",
+      "dependsOn": [],
+      "args": [
+        "-c",
+        "npm run start"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [],
+      "runOptions": {
+        "runOn": "default"
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "clear": true,
+        "echo": true
+      },
+      "detail": "Start n8n after ensuring dependencies are installed."
+    }
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "name": "n8n-project",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Local n8n extensions and configuration",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "start": "n8n",
+    "start:prod": "NODE_ENV=production n8n",
+    "dev": "n8n",
+    "build": "tsc -p tsconfig.json",
+    "lint": "eslint . --ext .js,.cjs,.mjs,.ts",
+    "format": "prettier -w .",
+    "prepare": "husky install || true"
+  },
+  "dependencies": {
+    "n8n": "^1.112.6",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "@types/node": "^24.5.2",
+    "eslint": "^9.36.0",
+    "husky": "^9.1.7",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.2"
+  }
+}

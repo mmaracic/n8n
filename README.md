@@ -4,6 +4,24 @@ https://github.com/n8n-io/n8n
 ## NPM local install
 https://docs.n8n.io/hosting/installation/npm/
 
+Package.json was created with all required dependencies (n8n, sqlite3). Runnining:
+```
+npm install
+```
+or task "npm install" will install all dependencies and then the application can be started.
+
+Run with 
+```
+n8n
+```
+or run task "start n8n" from package.json
+
+### Errors
+Even after addinng sqlite3 as dependency in package.json and running npm install it complained sqlite3 module was missing. Installed it with:
+```
+npm install sqlite3 --save
+```
+
 ## Docker 
 
 Created according to (steps 4+):  
